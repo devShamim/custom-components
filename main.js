@@ -4,6 +4,9 @@ const atbdDropdown = document.querySelectorAll('.atbd-dropdown');
 atbdDropdown.forEach(function(el) {
         el.querySelector('.atbd-dropdown-toggle').addEventListener('click', function(e) {
                 e.preventDefault();
+                document.querySelectorAll('.atbd-dropdown-items').forEach(function(elem) {
+                        elem.classList.remove('atbd-show');
+                });
                 el.querySelector('.atbd-dropdown-items').classList.toggle('atbd-show');
         });
 });
