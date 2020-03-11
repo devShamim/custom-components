@@ -1,5 +1,8 @@
 /* customize css the way you want */
-
+body{
+    height: 100vh;
+    width: 100%;
+}
 /* custom dropdown */
 .atbd-dropdown{
     position: relative;
