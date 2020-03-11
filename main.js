@@ -37,6 +37,10 @@ atbdSelect.forEach(function(el) {
                 item.addEventListener('click', function(e) {
                         e.preventDefault();
                         el.querySelector('.atbd-dropdown-toggle').textContent = item.textContent;
+                        el.querySelectorAll('.atbd-dropdown-item').forEach(function(elm) {
+                                elm.classList.remove('atbd-active');
+                        });
+                        item.classList.add('atbd-active');
                 });
         });
 });
