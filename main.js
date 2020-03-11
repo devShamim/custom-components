@@ -29,3 +29,14 @@ document.body.addEventListener('click', function(e) {
                 });
         }
 });
+
+// custom select
+const atbdSelect = document.querySelectorAll('.atbd-drop-select');
+atbdSelect.forEach(function(el) {
+        el.querySelectorAll('.atbd-dropdown-item').forEach(function(item) {
+                item.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        el.querySelector('.atbd-dropdown-toggle').textContent = item.textContent;
+                });
+        });
+});
